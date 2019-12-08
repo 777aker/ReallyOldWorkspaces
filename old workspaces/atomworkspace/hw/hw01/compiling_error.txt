@@ -1,0 +1,18 @@
+C:\Users\777ak\Desktop\atomworkspace\hw\hw01\prob02.cpp: In function 'void addUser(std::vector<User>, std::string, float, int)':
+C:\Users\777ak\Desktop\atomworkspace\hw\hw01\prob02.cpp:21:28: error: no matching function for call to 'std::vector<User>::push_back(User*)'
+   _users.push_back(new User);
+                            ^
+In file included from /usr/lib/gcc/x86_64-pc-cygwin/7.3.0/include/c++/vector:64:0,
+                 from C:\Users\777ak\Desktop\atomworkspace\hw\hw01\prob02.cpp:4:
+/usr/lib/gcc/x86_64-pc-cygwin/7.3.0/include/c++/bits/stl_vector.h:939:7: note: candidate: void std::vector<_Tp, _Alloc>::push_back(const value_type&) [with _Tp = User; _Alloc = std::allocator<User>; std::vector<_Tp, _Alloc>::value_type = User]
+       push_back(const value_type& __x)
+       ^~~~~~~~~
+/usr/lib/gcc/x86_64-pc-cygwin/7.3.0/include/c++/bits/stl_vector.h:939:7: note:   no known conversion for argument 1 from 'User*' to 'const value_type& {aka const User&}'
+/usr/lib/gcc/x86_64-pc-cygwin/7.3.0/include/c++/bits/stl_vector.h:953:7: note: candidate: void std::vector<_Tp, _Alloc>::push_back(std::vector<_Tp, _Alloc>::value_type&&) [with _Tp = User; _Alloc = std::allocator<User>; std::vector<_Tp, _Alloc>::value_type = User]
+       push_back(value_type&& __x)
+       ^~~~~~~~~
+/usr/lib/gcc/x86_64-pc-cygwin/7.3.0/include/c++/bits/stl_vector.h:953:7: note:   no known conversion for argument 1 from 'User*' to 'std::vector<User>::value_type&& {aka User&&}'
+C:\Users\777ak\Desktop\atomworkspace\hw\hw01\prob02.cpp: In function 'int main(int, const char**)':
+C:\Users\777ak\Desktop\atomworkspace\hw\hw01\prob02.cpp:52:40: error: could not convert 'users' from 'std::vector<User>*' to 'std::vector<User>'
+       addUser(users, username, gpa, age);
+                                        ^
